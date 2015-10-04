@@ -1,0 +1,309 @@
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:300,700');
+
+/*-- Estilo general --*/
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #F8F8F8;
+	background-image: url(../imagenes/fondoweb.jpg);
+	background-repeat:repeat;
+}
+
+/* Capas */
+#logo {
+	position:absolute;
+	width:280px;
+	height:103px;
+	left:50%;
+	margin-left:-484px;
+	margin-top:10px;
+	z-index:11;
+}
+#menu {
+	position:absolute;
+	width:786px;
+	height:76px;
+	left:50%;
+	margin-left:-380px;
+	margin-top:110px;
+	z-index:10;
+}
+#banner {
+	position:absolute;
+	width:978px;
+	height:355px;
+	left:50%;
+	margin-left:-492px;
+	z-index:1;
+}
+#cabecera {
+	position:absolute;
+	width:957px;
+	height:210px;
+	left:50%;
+	margin-left:-480px;
+	z-index:1;
+}
+
+/* Estilos */
+.textoplomochico {
+	font-family: 'Open Sans', sans-serif;
+	letter-spacing:-1px;
+	font-size: 14px;
+	color: #3d3d3d;
+	text-decoration:none;
+}
+.textoplomo {
+	font-family: 'Open Sans', sans-serif;
+	letter-spacing:-1px;
+	font-size: 14px;
+	color: #424242;
+	text-decoration:none;
+	line-height: 21px;
+}
+.textoplomoclaro {
+	font-family: 'Open Sans', sans-serif;
+	letter-spacing:-1px;
+	font-size: 15px;
+	color: #d0d0d0;
+	text-decoration:none;
+	line-height: 17px;
+}
+.textoplomogrande {
+	font-family: 'Open Sans', sans-serif;
+	letter-spacing:-1px;
+	font-size: 17px;
+	color: #424242;
+	text-decoration:none;
+	line-height: 22px;
+}
+.textoplomoenorme{
+	font-family: 'Open Sans', sans-serif;
+	letter-spacing:-1px;
+	font-size: 18px;
+	color: #d0d0d0;
+	text-decoration:none;
+}
+.linkplomo {
+	font-family: 'Open Sans', sans-serif;
+	letter-spacing:-1px;
+	color: #424242;
+	font-size: 12px;
+	text-decoration:none;
+}
+.linkplomo:hover {
+	font-family: 'Open Sans', sans-serif;
+	letter-spacing:-1px;
+	color: #424242;
+	font-size: 12px;
+	text-decoration:underline;
+}
+.textoblancogrande {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	color: #FFFFFF;
+}
+.textoblanco {
+	font-family: 'Open Sans', sans-serif;
+
+	font-size: 13px;
+	color: #FFFFFF;
+}
+.textoblancochico {
+	font-family: 'Open Sans', sans-serif;
+	letter-spacing:-1px;
+	font-size: 11px;
+	color: #FFFFFF;
+}
+.linkblanco {
+	font-family: 'Open Sans', sans-serif;
+	letter-spacing:-1px;
+	font-size: 14px;
+	color: #FFFFFF;
+	text-decoration:none;
+}
+.linkblanco:hover {
+	font-family: 'Open Sans', sans-serif;
+	letter-spacing:-1px;
+	font-size: 14px;
+	color: #FFFFFF;
+	text-decoration:underline;
+}
+.textoceleste {
+	font-family: 'Open Sans', sans-serif;
+	color: #2e183c;
+	font-size: 14px;
+}
+.textocelestechico {
+	font-family: 'Open Sans', sans-serif;
+	color: #2e183c;
+	font-size: 12x;
+}
+.textocelestegrande {
+	font-family: 'Open Sans', sans-serif;
+	letter-spacing:-1px;
+	color: #2e183c;
+	font-size: 22px;
+}
+.textocelesteenorme {
+	font-family: 'Open Sans', sans-serif;
+	letter-spacing:-2px;
+	color: #2e183c;
+	font-size: 30px;
+}
+.linkcelestechico {
+	font-family: 'Open Sans', sans-serif;
+	color: #ff8eb0;
+	font-size: 14px;
+	text-decoration:none;
+}
+.linkcelestechico:hover {
+	font-family: 'Open Sans', sans-serif;
+	color: #ff8eb0;
+	font-size: 14px;
+	text-decoration:underline;
+}
+.linkcelesteenorme {
+	font-family: 'Open Sans', sans-serif;
+	letter-spacing:-2px;
+	color: #2e183c;
+	font-size: 30px;
+	text-decoration:none;
+}
+.linkcelesteenorme:hover {
+	font-family: 'Open Sans', sans-serif;
+	letter-spacing:-2px;
+	color: #64258c;
+	font-size: 30px;
+	text-decoration:none;
+}
+.textoverde {
+	font-family: 'Open Sans', sans-serif;
+	color: #ea5179;
+	font-size: 14px;
+}
+.textoverdechico {
+	font-family: 'Open Sans', sans-serif;
+	color: #ea5179;
+	font-size: 12x;
+}
+.textoverdegrande {
+	font-family: 'Open Sans', sans-serif;
+	letter-spacing:-1px;
+	color: #ea5179;
+	font-size: 22px;
+}
+.textoverdeenorme {
+	font-family: 'Open Sans', sans-serif;
+	letter-spacing:-2px;
+	color: #ea5179;
+	font-size: 30px;
+}
+.linkverdechico {
+	font-family: 'Open Sans', sans-serif;
+	color: #ea5179;
+	font-size: 14px;
+	text-decoration:none;
+}
+.linkverdechico:hover {
+	font-family: 'Open Sans', sans-serif;
+	color: #ea5179;
+	font-size: 14px;
+	text-decoration:underline;
+}
+.linkverdeenorme {
+	font-family: 'Open Sans', sans-serif;
+	letter-spacing:-2px;
+	color: #ea5179;
+	font-size: 30px;
+	text-decoration:none;
+}
+.linkverdeenorme:hover {
+	font-family: 'Open Sans', sans-serif;
+	letter-spacing:-2px;
+	color: #f788a5;
+	font-size: 30px;
+	text-decoration:none;
+}
+.linkamarillochico {
+	font-family: 'Open Sans', sans-serif;
+	color: #ffda0e;
+	font-size: 11px;
+	text-decoration:none;
+}
+.linkamarillochico:hover {
+	font-family: 'Open Sans', sans-serif;
+	color: #ffda0e;
+	font-size: 11px;
+	text-decoration:underline;
+}
+.cajatexto {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	color:#333333;
+	font-weight:regular;
+	background-color:#CCCCCC;
+	height:25px;
+	text-transform:uppercase;
+	padding:5px;
+	border:1px solid #bbb;
+	border-radius:5px;
+	margin:5px 0;
+}
+.cajabusqueda {
+	font-family: 'Open Sans', sans-serif;
+	letter-spacing:-1px;
+	font-size: 14px;
+	padding-left:5px;
+	color: #414141; 
+	height:20px;
+	border:solid 1px #cccccc;
+	background-color:#ffffff;
+}
+.lista {
+	font-family: Arial;
+	font-size: 14px;
+	color:#333333;
+	font-weight:regular;
+	background-color:#CCCCCC;
+	height:38px;
+	padding:5px;
+	border:1px solid #bbb;
+	border-radius:5px;
+}
+.areatexto {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	color:#333333;
+	font-weight:regular;
+	background-color:#CCCCCC;
+	text-transform:uppercase;
+	padding:5px;
+	border:1px solid #bbb;
+	border-radius:5px;
+	margin:5px 0;
+}
+.botonenviar {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	background: #2e183c;
+	color: #FFFFFF;
+	border: 0;
+	height: 34px;
+	padding: 8px;
+	border-radius:5px;
+	text-decoration:none;
+}
+.botonenviar:hover {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	background: #ea5179;
+	color: #FFFFFF;
+	border: 0;
+	height: 34px;
+	padding: 8px;
+	border-radius:5px;
+	cursor:pointer;
+}

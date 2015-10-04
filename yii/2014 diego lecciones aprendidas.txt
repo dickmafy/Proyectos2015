@@ -1,0 +1,62 @@
+otra forma de corregir el error de php.exe es editando archivo yiic.bat de framework con "set PHP_COMMAND=..\..\..\php\php.exe" en ves de "set PHP_COMMAND=php.exe" para los que usan xamp como servidor portable no tengan problemas?
+
+crear M:\xampp\htdocs\yii\framework>yiic webapp ../facilito
+
+habilitar o descomentar del xamp >apache > conf > httpd.conf
+LoadModule rewrite_module modules/mod_rewrite.so
+
+##########################################
+Yii 1.1: Url: hide index.php 
+report it251
+Click to follow38 followers
+Maybe it looks simple, but some time ago I need some time to find a solution of this case. I finally got it, and I want to share that I also experienced such cases. So that it can make reference.
+
+Neither let us do the steps:
+
+Make sure that the hosting / your pc mod_rewrite module is active. if not actively try to activate in a way, open the httpd.conf file. You can check this in the phpinfo.php to find out.
+change this setting :
+
+#LoadModule rewrite_module modules/mod_rewrite.so
+to be
+
+LoadModule rewrite_module modules/mod_rewrite.so
+then go to .htaccess file, and try to modify to be:
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)\?*$ index.php/$1 [L,QSA]
+if above does not work try with this:
+
+RewriteEngine on
+
+# if a directory or a file exists, use it directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# otherwise forward it to index.php
+RewriteRule . index.php
+
+move .htaccess file to root directory, where is index.php thare.
+www
+ - protected
+ - index.php
+ - .htaccess
+Set main.php in your yii configuration, at component :
+'urlManager'=>array(
+    'urlFormat'=>'path',
+    'showScriptName'=>false,
+     'caseSensitive'=>false,        
+),
+so.., good luck
+For reference material I managed to do in my personal website (check my profile).
+
+NB: This for hide index.php
+
+
+
+##############3
+
+
+
+MENU : en el main.php de layout

@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="es"> <!--<![endif]-->
+
+    <head>
+        <meta charset="utf-8" />        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>OPENCLICK - Diseño Web Peru | Dominio y Hosting | Desarrollo de Software</title>
+        <!--CONFIGURACION GENERAL #AB3B40-->
+        <meta name="keywords" content="OPENCLICK, OPENCLICK.pe, servicios, diseño, web, prototipos, boceto, personalizada, medida, calidad, garantia, asegurada, software">
+        <meta name="description" content="OPENCLICK se caracteriza por aplicar la simplicidad para lograr resultados eficientes ">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="shortcut icon" href="openclick/icon.png" type="image/x-icon">
+        <link rel="stylesheet" href="openclick/css/bootstrapHead.css">
+        <link rel="stylesheet" href="openclick/jquery-ui-1.9.2.custom.min.css">
+        <link href="openclick/css/styleHead.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="openclick/css/style.css" rel="stylesheet" type="text/css" media="all" />
+        <link rel="stylesheet" href="openclick/css/flexslider.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="openclick/css/swipebox.css">
+
+        <!--SCRIPTS-->
+        <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
+        <script  type="text/javascript" src="openclick/js/jquery.min.js"></script>
+        <script  type="text/javascript" src="openclick/bootstrap.min.js"></script>
+        <script type="text/javascript" src="openclick/scrollIt.js"></script>
+
+        <script type="text/javascript" src="openclick/jquery-ui-1.9.2.custom.min.js"></script>
+        <!-- Script for gallery Here -->
+        <script type="text/javascript" src="openclick/js/jquery.mixitup.min.js"></script>
+        <!--<script type="text/javascript" src="openclick/angular/configuracion.js"></script>-->
+
+        <!-- Vendor: Angular, followed by our custom Javascripts 
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-route.min.js"></script>
+        -->
+        <script type="text/javascript" src="openclick/js/angular.min.js"></script>
+        <script type="text/javascript" src="openclick/js/angular-route.min.js" ></script>
+        <!-- Our Website Javascripts -->
+        <script type="text/javascript" src="openclick/angular/main.js"></script>
+        <!--<script src="js/jquery.min.js"></script>
+        <script type='text/javascript' src="js/jquery-1.11.1.min.js"></script>-->
+        <script  type="text/javascript" src="openclick/js/menu_jquery.js"></script>
+
+
+        <!------ Light Box ------>
+        <script  type="text/javascript" src="openclick/js/jquery.swipebox.min.js"></script> 
+        <script type="text/javascript">
+            jQuery(function ($) {
+                $(".swipebox").swipebox();
+            });
+        </script>
+        <!------ Eng Light Box ------>
+        <script type="text/javascript" src="openclick/js/move-top.js"></script>
+        <script type="text/javascript" src="openclick/js/easing.js"></script>
+        <script type="text/javascript">
+            jQuery(document).ready(function ($) {
+                $(".scroll").click(function (event) {
+                    event.preventDefault();
+                    $('html,body').animate({scrollTop: $(this.hash).offset().top}, 1200);
+                });
+            });
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                /*
+                 var defaults = {
+                 containerID: 'toTop', // fading element id
+                 containerHoverID: 'toTopHover', // fading element hover id
+                 scrollSpeed: 1200,
+                 easingType: 'linear' 
+                 };
+                 */
+                $().UItoTop({easingType: 'easeOutQuart'});
+            });
+        </script>
+
+        <script type="text/javascript">
+            $(function () {
+                var filterList = {
+                    init: function () {
+                        // MixItUp plugin
+                        // http://mixitup.io
+                        $('#portfoliolist').mixitup({
+                            targetSelector: '.portfolio',
+                            filterSelector: '.filter',
+                            effects: ['fade'],
+                            easing: 'snap',
+                            // call the hover effect
+                            onMixEnd: filterList.hoverEffect()
+                        });
+                    },
+                    hoverEffect: function () {
+                        // Simple parallax effect
+                        $('#portfoliolist .portfolio').hover(
+                                function () {
+                                    $(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+                                    $(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');
+                                },
+                                function () {
+                                    $(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
+                                    $(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');
+                                }
+                        );
+                    }
+                };
+                // Run the show!
+                filterList.init();
+            });
+        </script>
+        <script>
+            $(document).ready(function () {
+                $("#telefono").keypress(function (e) {
+                    var tecla = document.all ? tecla = e.keyCode : tecla = e.which;
+                    return ((tecla > 47 && tecla < 58) || tecla == 46);
+                });
+                $("#EnviarForm").click(function () {
+                    var nombre = $("#nombre").val();
+                    var tlf = $("#telefono").val();
+                    var correo = $("#correo").val();
+                    var mensaje = $("#mensaje").val();
+                    if (nombre.length < 1) {
+                        alert("El nombre es obligatorio");
+                        return false;
+                    }
+                    if (tlf.length < 1) {
+                        alert("El telefono es obligatorio");
+                        return false;
+                    }
+                    if (correo.length < 1) {
+                        alert("El e-mail es obligatorio");
+                        return false;
+                    } else {
+                        var filter = /[\w-\.]{3,}@([\w-]{2,}\.)*([\w-]{2,}\.)[\w-]{2,4}/;
+                        if (filter.test(correo)) {
+                        } else {
+                            alert("El correo no es valido");
+                            return false;
+                        }
+                    }
+                    if (mensaje.length < 1) {
+                        alert("El mensaje es obligatorio");
+                        return false;
+                    }
+                    $.ajax({
+                        url: '../module/frmcontactenos1.php',
+                        type: 'POST',
+                        data: {
+                            nombre: nombre,
+                            tlf: tlf,
+                            correo: correo,
+                            mensaje: mensaje
+                        },
+                        datatype: 'html',
+                        beforeSend: function () {
+                            $("#dialog").dialog({
+                                resizable: false,
+                                modal: true,
+                                autoOpen: true,
+                                width: 350,
+                                height: 120
+                            });
+                            $("#dialog #rpta").html("Enviando...");
+                        },
+                        success: function (html) {
+                            $("#dialog #rpta").html(html);
+                        }
+                    });
+                });
+            });
+
+        </script>
+        <script type="text/javascript" src="openclick/animacion-disenio.js"></script>
+
+        <script>
+            $(function () {
+                console.log("ejecutando JQUERY 11!");
+            });
+
+        </script>
+
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-59555612-1', 'auto');
+            ga('send', 'pageview');
+
+        </script>
+
+    </head>
+
+    <body ng-app="tutorialWebApp">
+        <!--HEADER-->
+        <div ng-include='"openclick/templates/header.html"'></div>
+
+
+        <!--CONTENIDO-->
+        <div class="disenio" id="disenio">
+            <!--INICIO-->
+            <div data-scroll-index="1" class="hola-disenio" id="disenio-hola">
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="margin-top: 50px;">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class=""></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                    </ol>
+                    <!--SLIDE DE INICIO-->
+                    <div class="carousel-inner">
+                        <div class="item">
+                            <div class="slider1"></div>
+                        </div>
+                        <div class="item active">
+                            <div class="slider2"></div>
+                        </div>
+                        <div class="item">
+                            <div class="slider3"></div>
+                        </div>
+                        <div class="item">
+                            <div class="slider4"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--SERVICIOS-->
+                <div class="container">
+                    <div class="hola-cont">
+                        <br>
+                        <p style="margin-bottom: 10px;">
+                            Hola, somos OpenClick. Un equipo de consultoría que le ofrece los servicios de Diseño Web, Sistemas Web , Sistemas de Seguridad Online, Identidad Corporativa ,E-marketing,  , Social media, Host, dominios, etc.
+                        <p><b>Innovacion con simpleza y eficacia por ti.</b> </p>
+                        <p><b>Creamos, Mejoramos, Innovamos para Ti.</b>
+                        </p>
+                    </div>
+                    <br>
+                    <div class="row" style="margin-top: 65px;margin-bottom: 50px;">
+
+                        <div class="col-xs-12 col-sm-6 col-lg-2 col-md-2 fig-bloq">
+                            <a href="#/web">
+                                <img src="openclick/images/home/web.png"  alt="web" width="140" height="140"/>
+                                <p style="font-style: italic;">
+                                    <b>Diseño Web</b>
+                                </p>   
+                            </a>
+                            <div class="caption-fig2">
+                                <ul>
+                                    <li>- Sitio Web Auto-Administrable.</li>
+                                    <li>- Diseño de Páginas Web a Medida.</li>
+                                    <li>- Administracion y Marketing de Redes Sociales.</li>
+                                    <li>- Correo Empresarial.</li>
+                                </ul>
+                                <a class="ver-mas" href="#/pricing"><!--Ver más--></a>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-lg-2 col-md-2 fig-bloq">
+                            <a href="#/hosting">
+                                <img src="openclick/images/home/www.png"  alt="web" width="140" height="140"/>
+                                <p style="font-style: italic;">
+                                    <b>Dominio y Hosting</b>
+                                </p>  
+                            </a>
+                            <div class="caption-fig1">
+                                <ul>
+                                    <li>- Plan Basico (desde $200).</li>
+                                    <li>- Plan Profesional(desde $300).</li>
+                                    <li>- Plan Corporativo (desde $400)</li>
+
+                                </ul>
+                                <a class="ver-mas" href="#/services"><!--Ver más--></a>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-lg-2 col-md-2 fig-bloq">
+                            <a href="#/seguridad">
+                                <div class="ppkt">
+                                    <img src="openclick/images/home/shop1.png"  alt="web" width="140" height="140"/>
+                                    <p style="font-style: italic;">
+                                        <b>Comercio Electronico  E-commerce</b>
+                                    </p>  
+                                </div>
+                            </a>
+                            <div class="caption-fig2">
+                                <ul>
+                                    <li>- Catalogo de Productos.</li>
+                                    <li>- Contenido Auto-Administrable o Servicio.</li>
+                                    <li>- Compras por Internet Paypal,Cash,Deposito,etc.</li>
+                                    <li>- Multi-Idioma y Manejo de precios .</li>
+                                </ul>
+                                <a class="ver-mas" href="http://www.openclick.pe"><!--Ver más--></a>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-lg-2 col-md-2 fig-bloq">
+                            <a href="#/web">
+                                <img src="openclick/images/home/pack.png"  alt="web" width="140" height="140"/>
+                                <p style="font-style: italic;">
+                                    <b>Sistemas Empresariales Web</b>
+                                </p>   
+                            </a>
+                            <div class="caption-fig2">
+                                <ul>
+                                    <li>- Tecnologias PHP,JAVA,.NET,MYSQL,ORACLE</li>
+                                    <li>- Puntos de Venta(Codigo Barra,Ticketera).</li>
+                                    <li>- Automatizacion de Procesos.</li>
+                                    <li>- Desarrollo Software a Medida.</li>
+                                    <li>- Intranet para Colegios.</li>
+                                    <li>- Calculo de Pago para Services.</li>
+                                </ul>
+                                <a class="ver-mas" href="#/pricing"><!--Ver más--></a>
+                            </div>
+                        </div>
+
+
+                        <div class="col-xs-12 col-sm-6 col-lg-2 col-md-2 fig-bloq">
+                            <a href="#/identidad">
+                                <div class="ppkt">
+                                    <img src="openclick/images/home/identidad.png"  alt="web" width="140" height="140"/>
+                                    <p style="font-style: italic;">
+                                        <b>Identidad Empresarial y Marketing Digital</b>
+                                    </p>  
+                                </div>
+                            </a>
+                            <div class="caption-fig2">
+                                <ul>
+                                    <li>- Logotipos.</li>
+                                    <li>- Tarjetas Personales.</li>
+                                    <li>- Hojas Membretadas.</li>
+                                    <li>- Carpetas Institucionales.</li>
+                                    <li>- Volantes-flyers.</li>
+                                    <li>- Trípticos-Dípticos.</li>
+                                    <li>- Catálogos.</li>
+                                    <li>- Brochures.</li>
+                                </ul>
+                                <a class="ver-mas" href="http://www.openclick.pe"><!--Ver más--></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!--PORTAFOLIO-->
+            <div data-scroll-index="2" class="portfolio"  id="portfolio">
+                <div class="container">
+                    <h2>Trabajos Recientes</h2>
+                    <i class="accent"></i>
+                    <p style="margin-bottom: 10px;">Hola, somos OpenClick. Un equipo de consultoría que le ofrece los servicios de Diseño Web, Sistemas Web , Sistemas de Seguridad Online, Identidad Corporativa ,E-marketing,  , Social media, Host, dominios, etc..</p>
+                    <p><b>Innovación con simpleza y eficacia por ti.</b>
+
+                    <ul id="filters" class="clearfix">
+                        <li><span class="filter active" data-filter="app card icon logos web">Todo</span></li>
+                        <li><span class="filter" data-filter="app">Diseño y Sistemas Web</span></li>
+                        <li><span class="filter" data-filter="card">Desarrollo de Software </span></li>
+                        <li><span class="filter" data-filter="icon">Identidad y Social Media</span></li>
+                    </ul>
+                    <div id="portfoliolist">
+                       
+                        <div class="portfolio card mix_all  wow bounceIn" >
+                            <div class="portfolio-wrapper grid_box">		
+                                <a href="openclick/img/portafolio/portafolio-empleadas-1.jpg" class="swipebox"  title="www.empleosresidenciallamolina.com - Agencia de empleo dedicada a la obtención, selección y dotación de personal doméstico"> 
+                                    <img src="openclick/img/portafolio/portafolio-empleadas-1.jpg" class="img-responsive" alt="">
+                                    <span class="zoom-icon"></span> </a>
+                            </div>
+                        </div>	
+                        
+                        <div class="portfolio app mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="app" style="display: inline-block; opacity: 1;">
+                            <div class="portfolio-wrapper grid_box">		
+                                <a href="openclick/images/food.jpg" class="swipebox"  title="Image Title"> <img src="openclick/images/food.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+                            </div>
+                        </div>					
+                        <div class="portfolio icon mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="icon" style="display: inline-block; opacity: 1;">
+                            <div class="portfolio-wrapper grid_box">		
+                                <a href="openclick/images/brand.jpg" class="swipebox"  title="Image Title"> <img src="openclick/images/brand.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+                            </div>
+                        </div>
+                        <div class="portfolio app mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="app" style="display: inline-block; opacity: 1;">
+                            <div class="portfolio-wrapper grid_box">		
+                                <a href="openclick/images/pho.jpg" class="swipebox"  title="Image Title"> <img src="openclick/images/pho.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+                            </div>
+                        </div>			
+                        <div class="portfolio card mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="card" style="display: inline-block; opacity: 1;">
+                            <div class="portfolio-wrapper grid_box">		
+                                <a href="openclick/images/sign.jpg" class="swipebox"  title="Image Title"> <img src="openclick/images/sign.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+                            </div>
+                        </div>	
+                        <div class="portfolio card mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="card" style="display: inline-block; opacity: 1;">
+                            <div class="portfolio-wrapper grid_box">		
+                                <a href="openclick/images/bcard.jpg" class="swipebox"  title="Image Title"> <img src="openclick/images/bcard.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+                            </div>
+                        </div>	
+                        <div class="portfolio icon mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="icon" style="display: inline-block; opacity: 1;">
+                            <div class="portfolio-wrapper grid_box">		
+                                <a href="openclick/images/pp.jpg" class="swipebox"  title="Image Title"> <img src="openclick/images/pp.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+                            </div>
+                        </div>
+                        <div class="portfolio logos mix_all wow bounceIn" data-wow-delay="0.4s" data-cat="logos" style="display: inline-block; opacity: 1;">
+                            <div class="portfolio-wrapper grid_box">		
+                                <a href="openclick/images/diamond.jpg" class="swipebox"  title="Image Title"> <img src="openclick/images/diamond.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>					
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div><!--PORTAFOLIO-->
+        </div>
+
+
+        <!--FOOTER-->
+        </br>
+        <div data-scroll-index="3" >
+            <div ng-include='"openclick/templates/footer.html"'></div>
+        </div>
+    </body>
+</html>
+

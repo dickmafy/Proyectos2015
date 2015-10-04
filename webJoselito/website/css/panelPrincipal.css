@@ -1,0 +1,213 @@
+/* Canvas Module */
+
+div.vertical{ width: auto }
+div.horizontal{ width: auto }
+div.horizontal div.vertical{ float: left;  }
+div.widget-wrapper{ }
+div.clearfix {
+	display: block;
+	clear: both;
+}
+.diy-f-accordion h3{
+	padding: 0.5em 0 0.5em 2.2em;
+}
+.diy-f-tabs-inner.ui-tabs .ui-tabs-panel,
+.diy-f-tabs-inner.ui-tabs.ui-widget.ui-widget-content,
+.diy-f-accordion-inner.ui-accordion .ui-widget-content{
+	padding: 0;
+	margin: 0;
+    background: none;
+}
+
+.diy-f-accordion-inner.ui-accordion .ui-accordion-content {
+	overflow:visible;
+
+}
+.diy-f-accordion .widget-wrapper{
+	margin-top:0 ;
+}
+
+/* LAYOUTS with SUB-CANVASES */
+.diy-f-sub-canvas {
+	float:left;
+}
+.diy-f-layout-g2  .diy-f-sub-canvas0, .diy-f-layout-g2  .diy-f-sub-canvas1 {
+	width:50%;
+}
+.diy-f-layout-g2w .diy-f-sub-canvas0, .diy-f-layout-g2e .diy-f-sub-canvas1 {
+	width:75%;
+}
+.diy-f-layout-g2e .diy-f-sub-canvas0, .diy-f-layout-g2w .diy-f-sub-canvas1 {
+	width:25%;
+}
+.diy-f-layout-g3  .diy-f-sub-canvas1{
+	width:60%;
+}
+.diy-f-layout-g3  .diy-f-sub-canvas0, .diy-f-layout-g3  .diy-f-sub-canvas2 {
+	width:20%;
+}
+
+
+@media (max-width: 480px){
+/* spliter fix */
+  .diy-f-sub-canvas,
+  .vertical{
+    clear:both !important;
+    float:none !important;
+    width:100% !important;
+  }
+  .freetext-image{
+	width: 100%!important;
+	}
+}
+
+
+
+.diy-breadcrumbs {
+  font-size: 0.9em;
+  margin: 7px;
+  padding-left:7px;
+  background:rgb(0,0,0);
+	background: transparent\9;
+	background:rgba(0,0,0,0.1);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#19000000,endColorstr=#19000000);
+	zoom: 1;
+}
+.diy-breadcrumbs:nth-child(n) {
+    filter: none;
+}
+.languages{
+	clear: both;
+	float: right;
+	margin: 3px;
+}
+.languages a{
+	text-decoration: none;
+    display: inline-block;
+}
+
+
+
+/* HTML widget - DIY EDITOR */
+body > #diy-widget-content ul {
+    list-style: disc outside none !important;
+    margin: 0.5em !important;
+    padding-left: 2em !important;
+}
+body > #diy-widget-content ul ul, body > #diy-widget-content ol ul {
+    list-style: circle outside none !important;
+}
+body > #diy-widget-content ul ul ul, body > #diy-widget-content ul ol ul, body > #diy-widget-content ol ul ul, body > #diy-widget-content ol ol ul {
+    list-style: square outside none !important;
+}
+body > #diy-widget-content ol {
+    list-style: decimal outside none !important;
+    margin: 0.5em !important;
+    padding-left: 2em !important;
+}
+body > #diy-widget-content ol ol, body > #diy-widget-content ul ol {
+    list-style: lower-alpha outside none !important;
+}
+body > #diy-widget-content ol ol ol, body > #diy-widget-content ol ul ol, body > #diy-widget-content ul ol ol, body > #diy-widget-content ul ul ol {
+    list-style: lower-roman outside none !important;
+}
+body > #diy-widget-content ul li, body > #diy-widget-content ul ul li, body > #diy-widget-content ol ul li, body > #diy-widget-content ul ol ul li, body > #diy-widget-content ol ul ul li, body > #diy-widget-content ol ol ul li, body > #diy-widget-content ul ul ul li, body > #diy-widget-content ol li, body > #diy-widget-content ol ol li, body > #diy-widget-content ul ol li, body > #diy-widget-content ol ol ol li, body > #diy-widget-content ol ul ol li, body > #diy-widget-content ul ol ol li, body > #diy-widget-content ul ul ol li {
+    list-style: inherit !important;
+    margin: 0 !important;
+}
+
+/* HTML widget - SITE (PREVIEW/FRONT) */
+
+.widget-wrapper.html .widget-body ul {list-style:disc outside none ; padding-left:2em ; margin:0.5em ;}
+.widget-wrapper.html .widget-body ul ul,
+.widget-wrapper.html .widget-body ol ul {list-style:circle outside none ;}
+.widget-wrapper.html .widget-body ul ul ul,
+.widget-wrapper.html .widget-body ul ol ul,
+.widget-wrapper.html .widget-body ol ul ul,
+.widget-wrapper.html .widget-body ol ol ul {list-style:square outside none ;}
+
+.widget-wrapper.html .widget-body ol {list-style:decimal outside none ; padding-left:2em ; margin:0.5em ;}
+.widget-wrapper.html .widget-body ol ol,
+.widget-wrapper.html .widget-body ul ol {list-style:lower-latin outside none ;}
+.widget-wrapper.html .widget-body ol ol ol,
+.widget-wrapper.html .widget-body ol ul ol,
+.widget-wrapper.html .widget-body ul ol ol,
+.widget-wrapper.html .widget-body ul ul ol {list-style:lower-roman outside none ;}
+
+.widget-wrapper.html .widget-body ul li,
+.widget-wrapper.html .widget-body ul ul li,
+.widget-wrapper.html .widget-body ol ul li,
+.widget-wrapper.html .widget-body ul ol ul li,
+.widget-wrapper.html .widget-body ol ul ul li,
+.widget-wrapper.html .widget-body ol ol ul li,
+.widget-wrapper.html .widget-body ul ul ul li,
+.widget-wrapper.html .widget-body ol li,
+.widget-wrapper.html .widget-body ol ol li,
+.widget-wrapper.html .widget-body ul ol li,
+.widget-wrapper.html .widget-body ol ol ol li,
+.widget-wrapper.html .widget-body ol ul ol li,
+.widget-wrapper.html .widget-body ul ol ol li,
+.widget-wrapper.html .widget-body ul ul ol li {list-style:inherit ;margin:0 }
+/*free text and free text with image widgets 
+to do: move other ul / ol setting form grid in templates */
+.widget-body .freetextarea ul,
+.widget-body .freetextarea ol{
+    width: auto;
+}
+
+.logo img { max-width: 100%; }
+.mobile .freetext-image {float:none!important;}
+.freetext-image{
+	max-width: 100%;
+}
+.freetext-image img{
+	max-width: 100%;
+    display: block;
+}
+.freetext-image .image_wrapper {
+	margin: auto;
+	/*line-height: 0;*/
+}
+/*.freetext-image .image_wrapper .diy-icss-wrapper {
+	overflow: hidden;
+}*/
+.widget-popup{
+bottom: 0;
+background: #FFF;
+z-index: 100000!important;
+}
+
+@media only screen and (max-width: 479px) {
+    /*
+    Make the Facebook Like box responsive (fluid width)
+    https://developers.facebook.com/docs/reference/plugins/like-box/
+    */
+     
+    /* This element holds injected scripts inside iframes that in some cases may stretch layouts. So, we're just hiding it. */
+    #fb-root {
+      display: none;
+    }
+     
+    /* To fill the container and nothing else */
+    .fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
+      left:0 !important;
+    }
+     
+    .embed-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16/9 ratio */ 
+    height: 100px;
+    overflow: hidden;
+    }
+     
+    .embed-container iframe,
+    .embed-container object,
+    .embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    }
+    /* end of facebook responsive */
+}

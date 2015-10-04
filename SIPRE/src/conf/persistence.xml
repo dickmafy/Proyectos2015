@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="SIPREPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>net.codejava.spring.model.SiprePlanillaDescuento</class>
+    <class>net.codejava.spring.model.SipreParametro</class>
+    <class>net.codejava.spring.model.SipreTmpGuardia</class>
+    <class>net.codejava.spring.model.SipreTmpBanco</class>
+    <class>net.codejava.spring.model.SipreGrado</class>
+    <class>net.codejava.spring.model.SipreConceptoDescuento</class>
+    <class>net.codejava.spring.model.SipreBoletaCabecera</class>
+    <class>net.codejava.spring.model.SipreTmpPlanillaDescuento</class>
+    <class>net.codejava.spring.model.SipreDescuentoLey</class>
+    <class>net.codejava.spring.model.SipreActividad</class>
+    <class>net.codejava.spring.model.SipreLogProceso</class>
+    <class>net.codejava.spring.model.SipreAuditoria</class>
+    <class>net.codejava.spring.model.SipreCostoProceso</class>
+    <class>net.codejava.spring.model.SipreDiferencia</class>
+    <class>net.codejava.spring.model.SiprePlanilla</class>
+    <class>net.codejava.spring.model.SipreBoletaDetalle</class>
+    <class>net.codejava.spring.model.SipreCargo</class>
+    <class>net.codejava.spring.model.SipreEntidadCrediticia</class>
+    <class>net.codejava.spring.model.SipreOpcionPefil</class>
+    <class>net.codejava.spring.model.SipreDescuentoIngreso</class>
+    <class>net.codejava.spring.model.SipreTmpJudicial</class>
+    <class>net.codejava.spring.model.SipreUsuario</class>
+    <class>net.codejava.spring.model.SipreTipoPlanilla</class>
+    <class>net.codejava.spring.model.SiprePlanillaAdicional</class>
+    <class>net.codejava.spring.model.SipreUsuarioRol</class>
+    <class>net.codejava.spring.model.SipreConceptoDescuentoLey</class>
+    <class>net.codejava.spring.model.SipreEscala</class>
+    <class>net.codejava.spring.model.SipreTmpPersona</class>
+    <class>net.codejava.spring.model.SipreGrupoGrado</class>
+    <class>net.codejava.spring.model.SipreEstadoCivil</class>
+    <class>net.codejava.spring.model.SipreBanco</class>
+    <class>net.codejava.spring.model.SipreEspealteMonto</class>
+    <class>net.codejava.spring.model.SipreTmpFamilia</class>
+    <class>net.codejava.spring.model.SipreDescuentoNoprocesado</class>
+    <class>net.codejava.spring.model.SipreOpcionSistema</class>
+    <class>net.codejava.spring.model.SipreSituacionCausal</class>
+    <class>net.codejava.spring.model.SipreConceptoIngreso</class>
+    <class>net.codejava.spring.model.SiprePersona</class>
+    <class>net.codejava.spring.model.SipreCalculoQuintaCategoria</class>
+    <class>net.codejava.spring.model.SipreEspecialidadAlterna</class>
+    <class>net.codejava.spring.model.SiprePlanillaOtro</class>
+    <class>net.codejava.spring.model.SipreDescuentoLeyPersona</class>
+    <class>net.codejava.spring.model.SiprePermanente</class>
+    <class>net.codejava.spring.model.SipreCalculoDescuentoLey</class>
+    <class>net.codejava.spring.model.SipreNucleo</class>
+    <class>net.codejava.spring.model.SipreSituacionAdm</class>
+    <class>net.codejava.spring.model.SipreArma</class>
+    <class>net.codejava.spring.model.SipreImportarInfo</class>
+    <class>net.codejava.spring.model.SipreDiferenciaDetalle</class>
+    <class>net.codejava.spring.model.SipreCedula</class>
+    <class>net.codejava.spring.model.SipreIngresoOtro</class>
+    <class>net.codejava.spring.model.SipreRol</class>
+    <class>net.codejava.spring.model.SipreAgrupador</class>
+    <class>net.codejava.spring.model.SipreIngresoGrado</class>
+    <class>net.codejava.spring.model.SipreSituacionCedula</class>
+    <class>net.codejava.spring.model.SipreDescuentoLeyDet</class>
+    <class>net.codejava.spring.model.SipreUnidad</class>
+    <class>net.codejava.spring.model.SipreSalida</class>
+    <class>net.codejava.spring.model.SipreDocente</class>
+    <class>net.codejava.spring.model.SipreParametroDetalle</class>
+    <class>net.codejava.spring.model.SipreExcepcion</class>
+    <class>net.codejava.spring.model.SipreTmpBonificacion</class>
+    <class>net.codejava.spring.model.SiprePerfil</class>
+    <class>net.codejava.spring.model.SiprePlanillaDetalle</class>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@localhost:1521:XE"/>
+      <property name="javax.persistence.jdbc.password" value="SIPRE"/>
+      <property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver"/>
+      <property name="javax.persistence.jdbc.user" value="US_SIPRE"/>
+    </properties>
+  </persistence-unit>
+</persistence>

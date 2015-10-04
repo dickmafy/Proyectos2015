@@ -1,0 +1,418 @@
+
+CREATE TABLE COMPROBANTE (
+       idcomprobante        VARCHAR(8) NOT NULL,
+       idcontrato           VARCHAR(8),
+       idempleador          VARCHAR(8),
+       idtrabajador         VARCHAR(8),
+       idrequerimiento      VARCHAR(8),
+       monto                VARCHAR(10),
+       serie                VARCHAR(3),
+       correlativo          VARCHAR(7),
+       sunat                VARCHAR(1),
+       fecha_registro       VARCHAR(10),
+       idestado             VARCHAR(1)
+);
+
+
+ALTER TABLE COMPROBANTE
+       ADD PRIMARY KEY (idcomprobante);
+
+
+CREATE TABLE COMPROBANTE_MANT (
+       idmantenimiento      VARCHAR(8) NOT NULL,
+       serie                VARCHAR(3),
+       correlativo          VARCHAR(7),
+       autorizacion         VARCHAR(30),
+       glosa                VARCHAR(100)
+);
+
+
+ALTER TABLE COMPROBANTE_MANT
+       ADD PRIMARY KEY (idmantenimiento);
+
+
+CREATE TABLE CONTRATO (
+       idcontrato           VARCHAR(8) NOT NULL,
+       idempleador          VARCHAR(8),
+       idtrabajador         VARCHAR(8),
+       idrequerimiento      VARCHAR(8),
+       cama_afuera          VARCHAR(1),
+       cama_adentro         VARCHAR(1),
+       horas                VARCHAR(1),
+       cocina               VARCHAR(1),
+       limpieza             VARCHAR(1),
+       ninera               VARCHAR(1),
+       enfermeria           VARCHAR(1),
+       mayordomo            VARCHAR(1),
+       chofer               VARCHAR(1),
+       todo_servicio        VARCHAR(1),
+       sueldo               VARCHAR(10),
+       descanso             VARCHAR(1),
+       otros                VARCHAR(100),
+       fecha_inicio         VARCHAR(10),
+       fecha_fin            VARCHAR(10),
+       anu_total            VARCHAR(1),
+       anu_parcial          VARCHAR(1),
+       fecharegistro        VARCHAR(10),
+       idestado             VARCHAR(1)
+);
+
+
+ALTER TABLE CONTRATO
+       ADD PRIMARY KEY (idcontrato);
+
+
+CREATE TABLE DEPARTAMENTO (
+       iddepartamento       VARCHAR(8),
+       nombre               VARCHAR(50)
+);
+
+
+CREATE TABLE DISTRITO (
+       iddistrito           VARCHAR(8),
+       idprovincia          VARCHAR(8),
+       iddepartamento       VARCHAR(8),
+       nombre               VARCHAR(50)
+);
+
+
+CREATE TABLE EMPLEADOR (
+       idempleador          VARCHAR(8) NOT NULL,
+       ape_paterno          VARCHAR(50),
+       ape_materno          VARCHAR(50),
+       nombres              VARCHAR(50),
+       tipo_doc             VARCHAR(1),
+       nro_doc              VARCHAR(30),
+       estado_civil         VARCHAR(1),
+       sexo                 VARCHAR(1),
+       fecha_nac            VARCHAR(10),
+       hijos                VARCHAR(1),
+       nro_hijos            VARCHAR(2),
+       mascota              VARCHAR(1),
+       idpais               VARCHAR(8),
+       tipo                 VARCHAR(1),
+       nombre               VARCHAR(100),
+       dpto                 VARCHAR(5),
+       manzana              VARCHAR(2),
+       lote                 VARCHAR(2),
+       urbanizacion         VARCHAR(50),
+       referencia           VARCHAR(50),
+       iddepartamento       VARCHAR(8),
+       idprovincia          VARCHAR(8),
+       iddistrito           VARCHAR(8),
+       telefono             VARCHAR(30),
+       tipo_cel             VARCHAR(1),
+       celular              VARCHAR(30),
+       adultos              VARCHAR(2),
+       desc_adultos         VARCHAR(50),
+       ninos                VARCHAR(2),
+       desc_ninos           VARCHAR(50),
+       mascotas             VARCHAR(2),
+       desc_mascotas        VARCHAR(50),
+       email                VARCHAR(100),
+       se_entero            VARCHAR(1),
+       idestado             VARCHAR(1)
+);
+
+
+ALTER TABLE EMPLEADOR
+       ADD PRIMARY KEY (idempleador);
+
+
+CREATE TABLE ESTADO (
+       idestado             VARCHAR(1) NOT NULL,
+       descripcion          VARCHAR(20)
+);
+
+
+ALTER TABLE ESTADO
+       ADD PRIMARY KEY (idestado);
+
+
+CREATE TABLE PAIS (
+       idpais               VARCHAR(8) NOT NULL,
+       nombre               VARCHAR(80)
+);
+
+
+ALTER TABLE PAIS
+       ADD PRIMARY KEY (idpais);
+
+
+CREATE TABLE PERFIL (
+       idperfil             VARCHAR(1),
+       descripcion          VARCHAR(20),
+       fecharegistro        VARCHAR(10),
+       idestado             VARCHAR(1)
+);
+
+
+ALTER TABLE PERFIL
+       ADD PRIMARY KEY (idperfil);
+
+
+CREATE TABLE PERSONAL (
+       idpersonal           VARCHAR(8) NOT NULL,
+       nombres              VARCHAR(30),
+       apellido_paterno     VARCHAR(30),
+       apellido_materno     VARCHAR(30),
+       telefono             VARCHAR(20),
+       email                VARCHAR(50),
+       direccion            VARCHAR(100),
+       idusuario            VARCHAR(8),
+       idestado             VARCHAR(1)
+);
+
+
+ALTER TABLE PERSONAL
+       ADD PRIMARY KEY (idpersonal);
+
+
+CREATE TABLE PROVINCIA (
+       idprovincia          VARCHAR(8),
+       iddepartamento       VARCHAR(8),
+       nombre               VARCHAR(50)
+);
+
+
+CREATE TABLE REQUERIMIENTO (
+       idrequerimiento      VARCHAR(8) NOT NULL,
+       cama_afuera          VARCHAR(1),
+       cama_adentro         VARCHAR(1),
+       horas                VARCHAR(1),
+       cocina               VARCHAR(1),
+       limpieza             VARCHAR(1),
+       ninera               VARCHAR(1),
+       enfermeria           VARCHAR(1),
+       mayordomo            VARCHAR(1),
+       chofer               VARCHAR(1),
+       todo_servicio        VARCHAR(1),
+       sueldo               VARCHAR(10),
+       descanso             VARCHAR(1),
+       otros                VARCHAR(100),
+       idempleador          VARCHAR(8),
+       fecha_registro       VARCHAR(10),
+       idestado             VARCHAR(1)
+);
+
+
+ALTER TABLE REQUERIMIENTO
+       ADD PRIMARY KEY (idrequerimiento);
+
+
+CREATE TABLE TRABAJADOR (
+       idtrabajador         VARCHAR(8) NOT NULL,
+       ape_paterno          VARCHAR(50),
+       ape_materno          VARCHAR(50),
+       nombres              VARCHAR(50),
+       tipo_doc             VARCHAR(1),
+       nro_doc              VARCHAR(30),
+       estado_civil         VARCHAR(1),
+       sexo                 VARCHAR(1),
+       instruccion          VARCHAR(1),
+       fecha_nac            VARCHAR(10),
+       idpais               VARCHAR(8),
+       tipo                 VARCHAR(1),
+       nombre               VARCHAR(100),
+       dpto                 VARCHAR(5),
+       manzana              VARCHAR(2),
+       lote                 VARCHAR(2),
+       urbanizacion         VARCHAR(50),
+       referencia           VARCHAR(50),
+       iddepartamento       VARCHAR(8),
+       idprovincia          VARCHAR(8),
+       iddistrito           VARCHAR(8),
+       telefono             VARCHAR(30),
+       tipo_cel             VARCHAR(1),
+       celular              VARCHAR(30),
+       cama_afuera          VARCHAR(1),
+       cama_adentro         VARCHAR(1),
+       horas                VARCHAR(1),
+       cocina               VARCHAR(1),
+       limpieza             VARCHAR(1),
+       ninera               VARCHAR(1),
+       enfermeria           VARCHAR(1),
+       mayordomo            VARCHAR(1),
+       chofer               VARCHAR(1),
+       todo_servicio        VARCHAR(1),
+       sueldo               VARCHAR(10),
+       descanso             VARCHAR(1),
+       tipo_estudio         VARCHAR(1),
+       descripcion          VARCHAR(50),
+       empresa              VARCHAR(50),
+       cargo                VARCHAR(50),
+       ama_casa             VARCHAR(1),
+       se_entero            VARCHAR(1),
+       capacitacion1        VARCHAR(1),
+       capacitacion2        VARCHAR(1),
+       capacitacion3        VARCHAR(1),
+       capacitacion4        VARCHAR(1),
+       documento1           VARCHAR(255),
+       documento2           VARCHAR(255),
+       documento3           VARCHAR(255),
+       tipo_doc4            VARCHAR(1),
+       documento4           VARCHAR(255),
+       documento5           VARCHAR(255),
+       documento6           VARCHAR(255),
+       documento7           VARCHAR(255),
+       nombre_ref1          VARCHAR(50),
+       tipo_doc_ref1        VARCHAR(1),
+       num_doc_ref1         VARCHAR(30),
+       direccion_ref1       VARCHAR(50),
+       tipo_ref1            VARCHAR(1),
+       act_ref1             VARCHAR(1),
+       fechaini_ref1        VARCHAR(10),
+       fechafin_ref1        VARCHAR(10),
+       retiro_ref1          VARCHAR(50),
+       telefono_ref1        VARCHAR(30),
+       nombre_ref2          VARCHAR(50),
+       tipo_doc_ref2        VARCHAR(1),
+       num_doc_ref2         VARCHAR(30),
+       direccion_ref2       VARCHAR(50),
+       tipo_ref2            VARCHAR(1),
+       act_ref2             VARCHAR(1),
+       fechaini_ref2        VARCHAR(10),
+       fechafin_ref2        VARCHAR(10),
+       retiro_ref2          VARCHAR(50),
+       telefono_ref2        VARCHAR(30),
+       fecha_registro       VARCHAR(10),
+       idestado             VARCHAR(1)
+);
+
+
+ALTER TABLE TRABAJADOR
+       ADD PRIMARY KEY (idtrabajador);
+
+
+CREATE TABLE USUARIO (
+       idusuario            VARCHAR(8) NOT NULL,
+       usuario              VARCHAR(30),
+       contrasena           VARCHAR(30),
+       idperfil             VARCHAR(1),
+       fecharegistro        VARCHAR(10),
+       idestado             VARCHAR(1)
+);
+
+
+ALTER TABLE USUARIO
+       ADD PRIMARY KEY (idusuario);
+
+
+ALTER TABLE COMPROBANTE
+       ADD FOREIGN KEY (idtrabajador)
+                             REFERENCES TRABAJADOR
+                             ON DELETE SET NULL;
+
+
+ALTER TABLE COMPROBANTE
+       ADD FOREIGN KEY (idcontrato)
+                             REFERENCES CONTRATO
+                             ON DELETE SET NULL;
+
+
+ALTER TABLE COMPROBANTE
+       ADD FOREIGN KEY (idrequerimiento)
+                             REFERENCES REQUERIMIENTO
+                             ON DELETE SET NULL;
+
+
+ALTER TABLE COMPROBANTE
+       ADD FOREIGN KEY (idestado)
+                             REFERENCES ESTADO
+                             ON DELETE SET NULL;
+
+
+ALTER TABLE COMPROBANTE
+       ADD FOREIGN KEY (idempleador)
+                             REFERENCES EMPLEADOR
+                             ON DELETE SET NULL;
+
+
+ALTER TABLE CONTRATO
+       ADD FOREIGN KEY (idestado)
+                             REFERENCES ESTADO
+                             ON DELETE SET NULL;
+
+
+ALTER TABLE CONTRATO
+       ADD FOREIGN KEY (idrequerimiento)
+                             REFERENCES REQUERIMIENTO
+                             ON DELETE SET NULL;
+
+
+ALTER TABLE CONTRATO
+       ADD FOREIGN KEY (idempleador)
+                             REFERENCES EMPLEADOR
+                             ON DELETE SET NULL;
+
+
+ALTER TABLE CONTRATO
+       ADD FOREIGN KEY (idtrabajador)
+                             REFERENCES TRABAJADOR
+                             ON DELETE SET NULL;
+
+
+ALTER TABLE EMPLEADOR
+       ADD FOREIGN KEY (idpais)
+                             REFERENCES PAIS
+                             ON DELETE SET NULL;
+
+
+ALTER TABLE EMPLEADOR
+       ADD FOREIGN KEY (idestado)
+                             REFERENCES ESTADO
+                             ON DELETE SET NULL;
+
+
+ALTER TABLE PERFIL
+       ADD FOREIGN KEY (idestado)
+                             REFERENCES ESTADO
+                             ON DELETE SET NULL;
+
+
+ALTER TABLE PERSONAL
+       ADD FOREIGN KEY (idestado)
+                             REFERENCES ESTADO
+                             ON DELETE SET NULL;
+
+
+ALTER TABLE PERSONAL
+       ADD FOREIGN KEY (idusuario)
+                             REFERENCES USUARIO
+                             ON DELETE SET NULL;
+
+
+ALTER TABLE REQUERIMIENTO
+       ADD FOREIGN KEY (idestado)
+                             REFERENCES ESTADO
+                             ON DELETE SET NULL;
+
+
+ALTER TABLE REQUERIMIENTO
+       ADD FOREIGN KEY (idempleador)
+                             REFERENCES EMPLEADOR
+                             ON DELETE SET NULL;
+
+
+ALTER TABLE TRABAJADOR
+       ADD FOREIGN KEY (idpais)
+                             REFERENCES PAIS
+                             ON DELETE SET NULL;
+
+
+ALTER TABLE TRABAJADOR
+       ADD FOREIGN KEY (idestado)
+                             REFERENCES ESTADO
+                             ON DELETE SET NULL;
+
+
+ALTER TABLE USUARIO
+       ADD FOREIGN KEY (idestado)
+                             REFERENCES ESTADO
+                             ON DELETE SET NULL;
+
+
+ALTER TABLE USUARIO
+       ADD FOREIGN KEY (idperfil)
+                             REFERENCES PERFIL
+                             ON DELETE SET NULL;

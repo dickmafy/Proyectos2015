@@ -1,0 +1,4 @@
+body{background-image:url(http://carlosmaza.com/wp-content/themes/photolux/images/patterns/pattern20.png);}h1,h2,h3,h4,h5,h6,.accordion-description a,#content-container .wp-pagenavi,#portfolio-categories ul li.selected,.table-title td,.table-description strong,table th,.tabs a{font-family:"PT Sans Narrow", "PT Sans", "Arial Narrow", Verdana, Geneva, sans-serif;}body, .content-box .post-info{font-family:"PT Sans Narrow", "PT Sans", "Arial Narrow", Verdana, Geneva, sans-serif;}#header{background-image:none; background-color:#a80711;}
+#navigation-container{background-color:#000;}
+#hide-button{background:none;opacity:2;}
+#hide-button{background-color:#a80711;}
