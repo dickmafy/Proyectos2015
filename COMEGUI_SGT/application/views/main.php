@@ -5,8 +5,9 @@
       <div class="container-fluid">
         <a class="brand" href="#" name="top">Post Message App</a>
           <ul class="nav">
-            <li><a href="#"><i class="icon-home"></i> Home</a></li>
-            <li class="divider-vertical"></li>
+            <li><a href="<?php echo site_url('main/show_main')?>"><i class="icon-home"></i> Inicio</a></li><li class="divider-vertical"></li>
+            <li><a href="<?php echo site_url('ticket/ticket')?>"><i class="icon-share"></i> Ticket</a></li><li class="divider-vertical"></li>
+            
           </ul>
           <div class="btn-group pull-right">
             <?php if ($is_admin) : ?>

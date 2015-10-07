@@ -79,8 +79,8 @@ class Main extends CI_Controller{
     $userInfo = $this->input->post(null,true);
 
     if( count($userInfo) ) {
-      $this->load->model('user_m');
-      $saved = $this->user_m->create_new_user($userInfo);
+      $this->load->model('User_m');
+      $saved = $this->User_m->create_new_user($userInfo);
     }
 
     if ( isset($saved) && $saved ) {
@@ -93,8 +93,8 @@ class Main extends CI_Controller{
     $user_id = $this->session->userdata('id');
 
     if( isset($new_tagline) && $new_tagline != "" ) {
-      $this->load->model('user_m');
-      $saved = $this->user_m->update_tagline($user_id, $new_tagline);
+      $this->load->model('User_m');
+      $saved = $this->User_m->update_tagline($user_id, $new_tagline);
     }
 
     if ( isset($saved) && $saved ) {

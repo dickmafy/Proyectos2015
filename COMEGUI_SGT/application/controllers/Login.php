@@ -2,11 +2,18 @@
 
 class Login extends CI_Controller {
 
-    function index() {
-        $this->load->library('session');
+     public function __construct()
+  {
+    parent::__construct();
+    $this->load->library('session');
         $this->load->helper('url');
         $this->load->database();
         $this->load->library('grocery_CRUD');
+    
+	
+  }
+  
+    function index() {
         if( $this->session->userdata('isLoggedIn') ) {
             redirect('/main/show_main');
         } else {
@@ -40,7 +47,10 @@ class Login extends CI_Controller {
     }
 
     function logout_user() {
-      $this->session->sess_destroy();
+      //$this->session->sess_destroy();
+      //$this->session->all_userdata();
+      //$this->session->unset_userdata('isLoggedIn');
+     $this->session->sess_destroy();
       $this->index();
     }
 
