@@ -26,7 +26,6 @@ class Examples extends CI_Controller {
 
 	public function index()
 	{
-            echo "hola";
 		$this->_example_output((object)array('output' => '' , 'js_files' => array() , 'css_files' => array()));
 	}
 

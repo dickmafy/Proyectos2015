@@ -1,0 +1,8 @@
+esta unido el login y el grocery crud funcionan bien,
+solo necesitas unir el header y footer glogal para todos
+y que valides que cuando ingresen a las tablas ticket,producto, etc
+este logeado.
+
+cambiar estilos.
+
+esta con CI 3.0

@@ -1,18 +1,15 @@
 <?php
 
-class Login extends CI_Controller {
+class login extends CI_Controller {
 
-     public function __construct()
-  {
-    parent::__construct();
-    $this->load->library('session');
-        $this->load->helper('url');
+    function __construct() {
+        parent::__construct();
+        $this->load->driver('session');
         $this->load->database();
+        $this->load->helper('url');
         $this->load->library('grocery_CRUD');
-    
-	
-  }
-  
+    }
+
     function index() {
         if( $this->session->userdata('isLoggedIn') ) {
             redirect('/main/show_main');
@@ -23,19 +20,20 @@ class Login extends CI_Controller {
 
     function login_user() {
         // Create an instance of the user model
-        $this->load->model('User_m');
+        $this->load->model('user_m');
 
         // Grab the email and password from the form POST
         $email = $this->input->post('email');
         $pass  = $this->input->post('password');
 
         //Ensure values exist for email and pass, and validate the user's credentials
-        if( $email && $pass && $this->User_m->validate_user($email,$pass)) {
+        if( $email && $pass && $this->user_m->validate_user($email,$pass)) {
             // If the user is valid, redirect to the main view
-            redirect('/Main/show_main');
+            redirect('/main/show_main');
         } else {
             // Otherwise show the login screen with an error message.
-           $this->show_login(true);
+            echo "<script>console.info('>validateuser');</script>";
+            $this->show_login(true);
         }
     }
 
@@ -47,10 +45,7 @@ class Login extends CI_Controller {
     }
 
     function logout_user() {
-      //$this->session->sess_destroy();
-      //$this->session->all_userdata();
-      //$this->session->unset_userdata('isLoggedIn');
-     $this->session->sess_destroy();
+      $this->session->sess_destroy();
       $this->index();
     }
 

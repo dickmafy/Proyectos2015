@@ -1,17 +1,9 @@
 <?php
 
 
-class User_m extends CI_Model {
+class user_m extends CI_Model {
 
-    var $details; 
-    
-    public function __construct() {
-        parent::__construct();
-        $this->load->library('session');
-        $this->load->helper('url');
-        $this->load->database();
-        $this->load->library('grocery_CRUD');
-    }
+    var $details;
 
     function validate_user( $email, $password ) {
         // Build a query to retrieve the user's details
@@ -20,7 +12,7 @@ class User_m extends CI_Model {
         $this->db->where('email',$email );
         $this->db->where( 'password', sha1($password) );
         $login = $this->db->get()->result();
-
+        
         // The results of the query are stored in $login.
         // If a value exists, then the user account exists and is validated
         if ( is_array($login) && count($login) == 1 ) {

@@ -1,9 +1,10 @@
 $(function () {
 
-    var App = {
+  var App = {
 
     //TODO: Find a better way to set these from config.php
-    baseUrl : '',
+    //baseUrl : '/codeigniter/ci_sock-master/ci_sock-master/part_one/',
+    baseUrl : '/COMEGUI_SGT/',
     maxCharacters: 320,
     maxPostsPerPage : 5,
 

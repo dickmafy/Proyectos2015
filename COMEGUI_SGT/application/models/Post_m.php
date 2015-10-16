@@ -1,15 +1,7 @@
 <?php
 
-class Post_m extends CI_Model {
+class post_m extends CI_Model {
 
-     public function __construct() {
-        parent::__construct();
-        $this->load->library('session');
-        $this->load->helper('url');
-        $this->load->database();
-        $this->load->library('grocery_CRUD');
-    }
-    
   function save_post( $body ) {
 
     $data['body'] = $body;

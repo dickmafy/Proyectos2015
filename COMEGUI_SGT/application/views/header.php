@@ -25,6 +25,17 @@
   <link rel="stylesheet" href="<?php echo base_url();?>assets/css/main.css">
 
   <script src="<?php echo base_url();?>assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+##ESTOY EN HEADER LOGIN
+  esta unido el login y el grocery crud funcionan bien,
 
+Estoy en el header global
+solo necesitas unir el header y footer glogal para todos
+y que valides que cuando ingresen a las tablas ticket,producto, etc
+este logeado.
+
+cambiar estilos.
+
+esta con CI 3.0
+ 
 </head>
 <body>

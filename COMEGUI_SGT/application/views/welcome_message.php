@@ -69,9 +69,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <div id="container">
 	<h1>Welcome to CodeIgniter!</h1>
+        <a href="http://localhost/COMEGUI_SGT/index.php/ticketController/ticket
+           ">http://localhost/COMEGUI_SGT/index.php/ticketController/ticket
+</a>
 
 	<div id="body">
-		<p>http://localhost/COMEGUI_SGT/index.php?c=ticketController&m=ticket</p>
+		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
 
 		<p>If you would like to edit this page you'll find it located at:</p>
 		<code>application/views/welcome_message.php</code>
@@ -80,13 +83,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<code>application/controllers/Welcome.php</code>
 
 		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
-                 <div>
-        <a href='ticket/ticket'>Registro de  Ticket</a> |
-        <a href='producto/producto'>Gestión Producto</a> | 
-        
- 
-    </div>
-                
 	</div>
 
 	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
